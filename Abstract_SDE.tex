@@ -1,0 +1,69 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{amsmath, amssymb, enumerate, xcolor, framed, float}
+\usepackage{amsfonts, amsthm, comment, longtable, caption, subcaption}
+\newcommand{\W}{\text{W}}
+
+\usepackage[left=1.2in,top=.8in,right=1.2in,nohead,bottom=1.2in]{geometry}
+
+
+\title{Stochastic Differential Equations and Applications}
+\author{Mentor: \href{https://www.iitk.ac.in/new/mrinmay-biswas}{Dr. Mrinmay Biswas}}
+\date{June 2023}
+
+\begin{document}
+
+
+
+\maketitle
+
+
+\section{Introduction}
+Stochastic Differential Equations (SDEs) provide a powerful framework for modeling dynamic systems influenced by random fluctuations. This project aims to explore the theory and practical applications of SDEs, with a specific focus on the utilization of MATLAB programming, some applications in mathematical finance, and the simulation of Brownian motion.
+
+\section{Theory}
+The project begins by introducing the fundamental concepts of Measure Theory involving probability space, Random variables, and the Law of Distribution. Then moving towards the fundamental concepts of SDEs, including Itô's lemma and the notion of stochastic integration. The MATLAB programming language serves as a valuable tool for solving SDEs, enabling efficient numerical simulations and analysis.
+Here are some theoretical topics that have been covered yet:
+\begin{itemize}
+    \item \textbf{Probability Measure:} A probability measure is a mathematical function that assigns probabilities to events in a given sample space. It is denoted by P and satisfies certain axioms, such as non-negativity, countable additivity, and normalization. In the context of SDEs, a probability measure captures the uncertainty associated with random variables or processes involved in the equations. In the project on SDEs, the probability measure is used to quantify the likelihood of different events occurring within the stochastic models. 
+ 
+    \item \textbf{Brownian Motion:} Brownian motion, named after the botanist Robert Brown, is a stochastic process that describes the random motion of particles suspended in a fluid. It plays a fundamental role in stochastic calculus and stochastic differential equations. It serves as a building block for modeling random phenomena and is particularly useful for capturing the random fluctuations observed in various real-world systems. It is characterized by three main properties:
+    \begin{enumerate}
+        \item It exhibits continuous paths, meaning that it is continuous over time.\\        With probability $1$, the function $t \mapsto \W(t,\omega)$ is continuous almost sure and it doesn't have any jumps or discontinues.
+        \item It has independent increments, indicating that the displacement of the process in non-overlapping intervals is independent.\\        The random variable $(\W_v)-(\W_u)$ and $(\W_t)-(\W_s)$ are independent whenever $u\leq v \leq s \leq t$. $(u,v) \ \text{and} \  (s,t)$ are disjoint random variable.
+        \item It has Gaussian increments, meaning that the increments follow a normal distribution.\\        $(\W_{t+s})-(\W_s)  \thicksim N(0,t)$ or  $(\W_{t})-(\W_0)  \thicksim N(0,t)$  where $t > 0, x \in \mathbb{R}$ 
+    \[ f(x;0,t) = \frac{1}{(2\pi t)^{1/2}} e^{\frac{-(x)^{2}}{2t}}\]
+    \end{enumerate}
+   Brownian motion serves as a key ingredient in the construction of the stochastic processes in SDEs. By combining the deterministic and stochastic components, SDEs provide a versatile framework for modeling dynamic systems under random influences and analyzing their behavior using numerical simulations and mathematical techniques.
+    \item \textbf{Stochastic Differential Equations (SDEs):} Stochastic differential equations are differential equations that involve both deterministic and random components. They are used to model systems that evolve over time under the influence of random fluctuations. SDEs consist of a deterministic part, described by ordinary differential equations, and a stochastic part, typically involving Brownian motion.
+    \[\,dy(t) = f(t,y(t))\,dt + \sigma(t,y(t))\,d\W_t \ , 0<t\leq T \ \text{(1)}\]
+    \[y(0)=y_0\]
+    Driven by Brownian Motion $\{\W_t\}_{0 \leq t \leq T}$.\\
+    We focus on the existence, uniqueness, and properties of the solutions of (1).\\
+    Application of (1) is mathematical finance and filtering problems.\\
+    Currently, we are studying the Itô integration:
+    \[\int_{a}^{b}{f(t,\omega}\,d\W_t(\omega) \ \text{denoted by Itô.}\]
+    
+    
+    
+\end{itemize}
+
+
+\section{Acknowledgment}
+This project provides an in-depth exploration of stochastic differential equations and their applications, emphasizing the use of MATLAB programming and the simulation of Brownian motion. By combining theoretical concepts with practical implementation, we comprehensively understand stochastic modeling techniques and their real-world significance across diverse disciplines.
+\section{Conclusion}
+The solutions to SDEs are stochastic processes that capture the evolution of the system over time. They exhibit randomness due to the stochastic component, making them suitable for modeling phenomena in finance, physics, engineering, and other fields where uncertainty and random effects play a significant role.
+
+\section{References}
+\begin{itemize}
+    \item \href{https://drive.google.com/file/d/1pPIpvQBrxkK69bebNpvoupaZNODOAGIk/view?usp=drive_link}{Siva Athreya, V. S. Sunder - Measure and Probability-CRC Press (2008)}
+    \item \href{https://www.dropbox.com/scl/fo/o18jjmcgnvwu23ye2wwba/h?dl=0&rlkey=0n9ibd9u21w8oykfg7hut3hyf}{Athreya and Lahiri -Measure and Probability Theory (2006)}
+    \item \href{https://drive.google.com/file/d/1dDVWcERBHMOOmIBrovXGwt5KPLrIyRxC/view?usp=drive_link}{Oksendal B-Stochastic Differential Equations-Springer (2000)}
+    \item \href{https://drive.google.com/file/d/1vRMD3PfWG5iZTjwdAeLyz3_fwPLslEyn/view?usp=drive_link}{Kuo H. H.,-Introduction to Stochastic Integration-Springer (2005)}
+    \item \href{https://drive.google.com/file/d/1EiN6uab1nWAKvLPzE0VfQuoJ4vpF1bjM/view?usp=drive_link}{Evans L. C. - An Introduction to Stochastic Differential Equations (2014, American Mathematical Society)}
+    \item \href{https://drive.google.com/file/d/1xmvYTdusN2AgJ88izdlyRi1nP0L7RGdY/view?usp=drive_link}{Xuerong Mao-Stochastic Differential Equations and Applications-Woodhead Publishing(2011)}
+\end{itemize}
+
+\end{document}
