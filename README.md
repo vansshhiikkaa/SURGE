@@ -1,2 +1,2 @@
 # SURGE
-this is SURGE project-2023
+this is my SURGE project-2023 on Stochastic Differential Equations and Applications in Mathematical Finance.
