@@ -1,5 +1,7 @@
-# Project: Applications of Stochastic Differential Equations in Mathematical Finance
-# Mentor: Prof. Mrinmay Biswas, Department of Mathematics & Statistics, IIT Kanpur
+## Project:
+Applications of Stochastic Differential Equations in Mathematical Finance
+## Mentor: 
+Prof. Mrinmay Biswas, Department of Mathematics & Statistics, IIT Kanpur
 ## Objective: 
 To comprehensively understand Stochastic Differential Equations (SDEs) & their applications in modelling dynamic systems influenced by random fluctuations like Financial Market, Weather Patterns, Epidemics & Spread of Diseases, etc
 ## Approach:
